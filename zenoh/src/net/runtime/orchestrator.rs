@@ -535,7 +535,10 @@ impl Runtime {
                         );
                     }
                 }
+                let start_time = std::time::Instant::now();
                 async_std::task::sleep(Duration::from_millis(delay)).await;
+                let elapsed_time = start_time.elapsed().as_millis();
+                dbg!(delay, elapsed_time);
                 if delay * SCOUT_PERIOD_INCREASE_FACTOR <= SCOUT_MAX_PERIOD {
                     delay *= SCOUT_PERIOD_INCREASE_FACTOR;
                 }
