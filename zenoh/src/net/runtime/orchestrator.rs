@@ -32,8 +32,8 @@ use zenoh_transport::TransportUnicast;
 
 const RCV_BUF_SIZE: usize = 65536;
 const SEND_BUF_INITIAL_SIZE: usize = 8;
-const SCOUT_INITIAL_PERIOD: u64 = 200; //ms
-const SCOUT_MAX_PERIOD: u64 = 1600; //ms
+const SCOUT_INITIAL_PERIOD: u64 = 100; //ms
+const SCOUT_MAX_PERIOD: u64 = 200; //ms
 const SCOUT_PERIOD_INCREASE_FACTOR: u64 = 2;
 const CONNECTION_RETRY_INITIAL_PERIOD: u64 = 1000; //ms
 const CONNECTION_RETRY_MAX_PERIOD: u64 = 4000; //ms
